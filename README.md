@@ -159,7 +159,7 @@ python ./run_bidirection.py --fine_tune {YOUR_FINETUNED_WEIGHT} --eval
 
 |  Method  | Spatial Expert | Temporal expert | Epoch | \#Frames x Clips x Crops |                          Fine-tune                           | Top-1 |
 | :------: | :------: | :------: | :---: | :-----: | :----------------------------------------------------------: | :---: |
-| CAST |  [CLIP-B](https://openaipublic.azureedge.net/clip/models/5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f/ViT-B-16.pt)   | [VideoMAE-B (pre-trained on K400)]((https://drive.google.com/file/d/1MzwteHH-1yuMnFb8vRBQDvngV1Zl-d3z/view?usp=sharing)) |  70  | 16x5x3  | [log](https://drive.google.com/file/d/1Npw-GblhSGWVx0nU06ztjDLMFcazeCx6/view?usp=sharing)/[checkpoint](https://drive.google.com/file/d/1nS2Z2-DcD8UdMadESVlJtvh9RDd9hiDs/view?usp=sharing)<br />| 85.3  |
+| CAST |  [CLIP-B](https://openaipublic.azureedge.net/clip/models/5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f/ViT-B-16.pt)   | [VideoMAE-B (pre-trained on K400)](https://drive.google.com/file/d/1MzwteHH-1yuMnFb8vRBQDvngV1Zl-d3z/view?usp=sharing) |  70  | 16x5x3  | [log](https://drive.google.com/file/d/1Npw-GblhSGWVx0nU06ztjDLMFcazeCx6/view?usp=sharing)/[checkpoint](https://drive.google.com/file/d/16ndsBVNjRuJMRM40P0-a3Q1JVA8tNLK7/view?usp=sharing)<br />| 85.3  |
 
 
 ## Acknowledgements
