@@ -107,7 +107,6 @@ def train_one_epoch(args, model: torch.nn.Module, criterion: torch.nn.Module,
         if mixup_fn is None:
             pass
             # class_acc = (output.max(-1)[-1] == targets).float().mean()
-            # mixup은 항상 하니까 걍 pass 처리.
         else:
             class_acc = None
         metric_logger.update(loss=loss_value)
@@ -224,8 +223,6 @@ def final_test(args, data_loader, model, device, file):
             loss_verb = criterion(output_verb, target[:,1])
 
         for i in range(output_noun.size(0)):
-            ############################################ 이부분!!!!!!!!!!!!!! noun verb version으로 수정해줘야함!!!!!!!!!!!!!##########################
-            # 최종 찍혀나오는게 label_id, noun_logit, verb_logit, noun_target, verb_target, chunk, split 순서로 변경.
             string = "{} {} {} {} {} {} {} {}\n".format(ids[i], \
                                                 str(output_noun.data[i].cpu().numpy().tolist()), \
                                                 str(output_verb.data[i].cpu().numpy().tolist()), \
@@ -235,7 +232,6 @@ def final_test(args, data_loader, model, device, file):
                                                 str(int(chunk_nb[i].cpu().numpy())), \
                                                 str(int(split_nb[i].cpu().numpy())))
             final_result.append(string)
-            ##############################################################################################################################################
 
         acc1_action, acc5_action = action_accuracy(output_noun, output_verb, action_target, topk=(1,5))
         acc1_noun, acc5_noun = accuracy(output_noun, target[:,0], topk=(1, 5))
