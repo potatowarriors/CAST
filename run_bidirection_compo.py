@@ -25,7 +25,7 @@ import models.bidir_modeling_crossattn
 
 
 def get_args():
-    parser = argparse.ArgumentParser('VideoMAE fine-tuning and evaluation script for video classification', add_help=False)
+    parser = argparse.ArgumentParser('CAST fine-tuning and evaluation script for video classification', add_help=False)
     parser.add_argument('--batch_size', default=64, type=int)
     parser.add_argument('--epochs', default=30, type=int)
     parser.add_argument('--update_freq', default=1, type=int)

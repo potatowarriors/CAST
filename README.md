@@ -1,6 +1,6 @@
 # CAST: Cross-Attention in Space and Time for Video Action Recognition [[NeurIPS 2023](https://neurips.cc/virtual/2023/poster/70748)]
 
-![VideoMAE Framework](figs/CAST.jpg)
+![CAST Framework](figs/CAST.jpg)
 
 
 
