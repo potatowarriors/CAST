@@ -10,10 +10,10 @@ OMP_NUM_THREADS=1 python -m torch.distributed.launch \
     --nproc_per_node=$6 \
     --master_port $3 --nnodes=$5 \
     --node_rank=$2 --master_addr=${MASTER_NODE} \
-    YOUR_PATH/run_bidirection_compo.py \
+    YOUR_PATH/run_bidirection.py \
     --data_set Kinetics-400 \
     --nb_classes 400 \
-    --vmae_model compo_bidir_vit_base_patch16_224 \
+    --vmae_model bidir_vit_base_patch16_224 \
     --anno_path ${ANNOTATION_PATH} \
     --data_path ${DATA_PATH} \
     --clip_finetune ${CLIP_MODEL_PATH} \

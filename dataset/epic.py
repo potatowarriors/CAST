@@ -139,7 +139,6 @@ class EpicVideoClsDataset(Dataset):
                if isinstance(buffer, list):
                     buffer = np.stack(buffer, 0)
 
-               # fix bug (test_crop수가 1 일때 zero division이 발생하는 error debug)
                if self.test_num_crop == 1:
                     spatial_step = 1.0 * (max( buffer.shape[1], buffer.shape[2]) - self.short_side_size) \
                                         / (self.test_num_crop)

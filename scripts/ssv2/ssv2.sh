@@ -10,7 +10,7 @@ OMP_NUM_THREADS=1 python -m torch.distributed.launch \
     --nproc_per_node=$6 \
     --master_port $3 --nnodes=$5 \
     --node_rank=$2 --master_addr=${MASTER_NODE} \
-    YOUR_PATH/run_bidirection_compo.py \
+    YOUR_PATH/run_bidirection.py \
     --data_set SSV2 \
     --nb_classes 174 \
     --vmae_model bidir_vit_base_patch16_224 \
